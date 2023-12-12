@@ -1,0 +1,12 @@
+<div>
+  <div *ngIf="!oauthService.hasValidAccessToken()">
+    <button (click)="login()" color="primary" mat-raised-button>
+      <mat-icon>connexion</mat-icon> Connnexion
+    </button>
+  </div>
+  <div *ngIf="oauthService.hasValidAccessToken()">
+    <button (click)="logout()" color="primary" mat-raised-button>
+      <mat-icon>deconnecter</mat-icon> Deconnexion
+    </button>
+  </div>
+</div>
